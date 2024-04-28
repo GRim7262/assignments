@@ -14,7 +14,25 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
-  return [];
-}
+  let catTotal = [];
 
+  transactions.forEach((T) => {
+    if (catTotal.hasOwnProperty(T.category)) {
+      catTotal[T.category] += T.price;
+    } else {
+      catTotal[T.category] = T.price;
+    }
+  });
+  return catTotal;
+}
+const Transactions = [
+  {
+    id: 1,
+    timestamp: 1656076800000,
+    price: 10,
+    category: "Food",
+    itemName: "Pizza",
+  },
+];
+console.log(calculateTotalSpentByCategory(transactions));
 module.exports = calculateTotalSpentByCategory;
