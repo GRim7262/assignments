@@ -4,7 +4,26 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  let string = str.toLowerCase();
+  let filteredString = "";
+
+  for (let i = 0; i < string.length; i++) {
+    const char = string[i];
+    if ((char >= "0" && char <= "9") || (char >= "a" && char <= "z")) {
+      filteredString += char;
+    }
+  }
+  console.log(filteredString);
+
+  let reversedStr = "";
+
+  for (let i = filteredString.length - 1; i >= 0; i--) {
+    reversedStr += filteredString[i];
+  }
+
+  return filteredString === reversedStr;
 }
+
+console.log(isPalindrome("vianl"));
 
 module.exports = isPalindrome;
