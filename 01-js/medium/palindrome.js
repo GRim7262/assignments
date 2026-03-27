@@ -4,26 +4,14 @@
 */
 
 function isPalindrome(str) {
-  let string = str.toLowerCase();
-  let filteredString = "";
-
-  for (let i = 0; i < string.length; i++) {
-    const char = string[i];
-    if ((char >= "0" && char <= "9") || (char >= "a" && char <= "z")) {
-      filteredString += char;
-    }
-  }
-  console.log(filteredString);
-
-  let reversedStr = "";
+  let filteredString = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  let reversedString = "";
 
   for (let i = filteredString.length - 1; i >= 0; i--) {
-    reversedStr += filteredString[i];
+    reversedString += filteredString[i];
   }
 
-  return filteredString === reversedStr;
+  return filteredString === reversedString;
 }
-
-console.log(isPalindrome("vianl"));
 
 module.exports = isPalindrome;

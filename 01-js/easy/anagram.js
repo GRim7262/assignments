@@ -5,10 +5,10 @@
 */
 
 function isAnagram(str1, str2) {
-  let firstString = str1.toLowerCase().split("").sort().join();
-  let secondString = str2.toLowerCase().split("").sort().join();
+  let firstStr = str1.toLowerCase().split("").sort().join();
+  let secondStr = str2.toLowerCase().split("").sort().join();
 
-  if (firstString == secondString) {
+  if (firstStr === secondStr) {
     return true;
   } else {
     return false;
