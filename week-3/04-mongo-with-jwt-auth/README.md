@@ -11,6 +11,15 @@ You need to use mongodb to store all the data persistently.
 
 ### Admin Routes:
 
+{
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNmExZDgwMjY2NjZmNTUyMWEwNGFlZDBlIiwiaWF0IjoxNzgwMzE4MjcyfQ.hpCCBGQOpgD0rcJH8N7J0aA5eVn4_tMDyY-zdmKlkmk"
+}
+
+{
+"message": "Course created successfully",
+"courseId": "6a1d817a666f5521a04aed13"
+}
+
 - POST /admin/signup
   Description: Creates a new admin account.
   Input Body: { username: 'admin', password: 'pass' }
@@ -29,6 +38,10 @@ You need to use mongodb to store all the data persistently.
   Output: { courses: [ { id: 1, title: 'course title', description: 'course description', price: 100, imageLink: 'https://linktoimage.com', published: true }, ... ] }
 
 ### User routes
+
+{
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3ODAzMjU5MDZ9.CpeEoqV6DqoncvTIwWpRSBKab-xTUwXYprv-7VtzSs8"
+}
 
 - POST /users/signup
   Description: Creates a new user account.
